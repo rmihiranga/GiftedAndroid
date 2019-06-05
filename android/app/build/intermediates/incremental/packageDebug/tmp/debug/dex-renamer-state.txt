@@ -1,0 +1,4 @@
+#Tue Jun 04 17:03:18 IST 2019
+base.0=C\:\\projects\\giftedAndroid\\gifted\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
