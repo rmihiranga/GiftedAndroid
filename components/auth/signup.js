@@ -1,0 +1,67 @@
+import React from 'react';
+import { StyleSheet, Text, View ,Image , TextInput , Button, ImageBackground, Spacer } from 'react-native';
+
+
+
+export default class App extends React.Component {
+
+  handleSignup = () => {
+    
+  }
+
+  render() {
+    return (
+      <ImageBackground source={require('../../assets/bg1.jpg')} style={{width: '100%', height: '100%'}} blurRadius={1}>
+      
+      <View style={styles.container}>
+      <View style={{flex:1, justifyContent:'center'}}>
+      <Image
+          style={{width: 158, height: 67}}
+          source={require('../../assets/GIFTED.png')}
+        />
+      </View>
+      <View style = {{flex:1,width:300, justifyContent:'center'}}>
+      <TextInput style = {styles.textInput} placeholder = "Name" underlineColorAndroid = "#ffff" placeholderTextColor = "#ffff"/>
+        <TextInput style = {styles.textInput} placeholder = "Email" underlineColorAndroid = "#ffff" placeholderTextColor = "#ffff"/>
+        <TextInput style = {styles.textInput} placeholder = "Password" underlineColorAndroid = "#ffff" placeholderTextColor = "#ffff"/>
+        <TextInput style = {styles.textInput} placeholder = "Re Type Password" underlineColorAndroid = "#ffff" placeholderTextColor = "#ffff"/>
+      </View>
+      <View style = {{flex:1,flexDirection:'column', width:200, justifyContent:'space-evenly'}}>
+        <Button style={styles.button} color = '#6B1380' title="signup" onPress={this.handleSignup} />
+        <Button style={styles.button} color = '#6B1380' title="Cancel" onPress={this.handleSignup} />
+        <Text style={{color:'#ffff'}} onPress={() => this.props.navigation.navigate('login')}>
+        Already have an account? Sign in!
+        </Text>
+      </View>
+      </View>
+      
+    </ImageBackground>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    
+    
+    alignItems:'center',
+    // justifyContent: 'center',
+    
+  },
+  textInput: {
+    height: 40,
+    paddingLeft:6,
+    width: '80%',
+    borderColor: 'gray',
+    borderWidth: 0,
+    marginBottom:20,
+    
+  },
+  button: {
+    
+    height: 20,
+    width: '50%'
+  }
+});
